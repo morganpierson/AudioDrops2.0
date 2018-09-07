@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		AA8BD2D921430494008935A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BD2D821430494008935A3 /* AppDelegate.swift */; };
-		AA8BD2DB21430494008935A3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8BD2DA21430494008935A3 /* art.scnassets */; };
 		AA8BD2DD21430494008935A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BD2DC21430494008935A3 /* ViewController.swift */; };
 		AA8BD2E021430494008935A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8BD2DE21430494008935A3 /* Main.storyboard */; };
 		AA8BD2E2214304A8008935A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8BD2E1214304A8008935A3 /* Assets.xcassets */; };
 		AA8BD2E5214304A8008935A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8BD2E3214304A8008935A3 /* LaunchScreen.storyboard */; };
+		AA8BD2EE21430CD9008935A3 /* DropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BD2ED21430CD9008935A3 /* DropScene.swift */; };
+		AA8BD2F12143122A008935A3 /* Node_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BD2F02143122A008935A3 /* Node_Extensions.swift */; };
+		AA8BD2F521431CEA008935A3 /* drop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA8BD2F421431CEA008935A3 /* drop.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA8BD2D521430494008935A3 /* AudioDrops2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDrops2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8BD2D821430494008935A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA8BD2DA21430494008935A3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		AA8BD2DC21430494008935A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA8BD2DF21430494008935A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA8BD2E1214304A8008935A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA8BD2E4214304A8008935A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA8BD2E6214304A8008935A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA8BD2ED21430CD9008935A3 /* DropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropScene.swift; sourceTree = "<group>"; };
+		AA8BD2F02143122A008935A3 /* Node_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node_Extensions.swift; sourceTree = "<group>"; };
+		AA8BD2F421431CEA008935A3 /* drop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = drop.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		AA8BD2D721430494008935A3 /* AudioDrops2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				AA8BD2EF21431210008935A3 /* Utilities */,
+				AA8BD2EC21430CB9008935A3 /* Scenes */,
 				AA8BD2D821430494008935A3 /* AppDelegate.swift */,
-				AA8BD2DA21430494008935A3 /* art.scnassets */,
 				AA8BD2DC21430494008935A3 /* ViewController.swift */,
 				AA8BD2DE21430494008935A3 /* Main.storyboard */,
 				AA8BD2E1214304A8008935A3 /* Assets.xcassets */,
+				AA8BD2F421431CEA008935A3 /* drop.jpg */,
 				AA8BD2E3214304A8008935A3 /* LaunchScreen.storyboard */,
 				AA8BD2E6214304A8008935A3 /* Info.plist */,
 			);
 			path = AudioDrops2.0;
+			sourceTree = "<group>";
+		};
+		AA8BD2EC21430CB9008935A3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AA8BD2ED21430CD9008935A3 /* DropScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		AA8BD2EF21431210008935A3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA8BD2F02143122A008935A3 /* Node_Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA8BD2DB21430494008935A3 /* art.scnassets in Resources */,
+				AA8BD2F521431CEA008935A3 /* drop.jpg in Resources */,
 				AA8BD2E5214304A8008935A3 /* LaunchScreen.storyboard in Resources */,
 				AA8BD2E2214304A8008935A3 /* Assets.xcassets in Resources */,
 				AA8BD2E021430494008935A3 /* Main.storyboard in Resources */,
@@ -139,6 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA8BD2EE21430CD9008935A3 /* DropScene.swift in Sources */,
+				AA8BD2F12143122A008935A3 /* Node_Extensions.swift in Sources */,
 				AA8BD2DD21430494008935A3 /* ViewController.swift in Sources */,
 				AA8BD2D921430494008935A3 /* AppDelegate.swift in Sources */,
 			);

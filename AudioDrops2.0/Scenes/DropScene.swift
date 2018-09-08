@@ -11,6 +11,7 @@ import SceneKit
 
 struct DropScene {
     var scene: SCNScene?
+    var animating: Bool = false
     
     init() {
         scene = self.initializeScene()
@@ -55,10 +56,40 @@ struct DropScene {
         
         containerNode.position = position
         scene.rootNode.addChildNode(containerNode)
+        nodeAnimation(node: containerNode)
+    }
+    
+    func nodeAnimation(node: SCNNode) {
+        
+        let rotation = SCNAction.rotateBy(x: CGFloat(360.degreesToRadians), y: CGFloat(360.degreesToRadians), z: CGFloat(360.degreesToRadians), duration: 7)
+        let bounceDown = SCNAction.moveBy(x: 0, y: -0.12, z: 0, duration: 1.7)
+        let bounceUp = SCNAction.moveBy(x: 0, y: 0.12, z: 0, duration: 1.7)
+        let bounceSequence = SCNAction.sequence([bounceDown, bounceUp])
+        let foreverBounce = SCNAction.repeatForever(bounceSequence)
+        let foreverRotate = SCNAction.repeatForever(rotation)
+        
+        node.runAction(foreverBounce)
+        node.runAction(foreverRotate)
+    }
+    
+    mutating func tapAnimation(node: SCNNode) {
+        if animating { return }
+        
+        animating = true
+        let rotation1 = SCNAction.rotateBy(x: CGFloat(-90.degreesToRadians), y: CGFloat(-90.degreesToRadians), z: CGFloat(-90.degreesToRadians), duration: 1)
+        node.runAction(rotation1)
+        let rotation2 = SCNAction.rotateBy(x: CGFloat(360.degreesToRadians), y: CGFloat(360.degreesToRadians), z: CGFloat(360.degreesToRadians), duration: 1)
+        let rotateAnimation = SCNAction.repeat(rotation2, count: 2)
+        node.runAction(rotateAnimation)
+        animating = false
     }
 }
 
-
+extension Int {
+    var degreesToRadians: Double {
+        return Double(self) * .pi/180
+    }
+}
 
 
 

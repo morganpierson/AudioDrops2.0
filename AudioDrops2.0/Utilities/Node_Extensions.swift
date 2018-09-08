@@ -28,4 +28,13 @@ extension SCNNode {
         } catch {}
         return nodesInFile
     }
+    
+    //looks for first node in hitTest array of nodes
+    func topmost(parent: SCNNode? = nil, until: SCNNode) -> SCNNode {
+        if let pNode = self.parent {
+            return pNode == until ? self : pNode.topmost(parent: pNode, until: until)
+        } else {
+            return self
+        }
+    }
 }

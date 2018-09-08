@@ -61,14 +61,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     
     @objc func didTapScreen(recognizer: UITapGestureRecognizer) {
-        if didInitializeScene {
-            if let camera = sceneView.session.currentFrame?.camera {
+        if didInitializeScene, let camera = sceneView.session.currentFrame?.camera {
+            let tapLocation = recognizer.location(in: sceneView)
+            let hitTestResults = sceneView.hitTest(tapLocation)
+            if let node = hitTestResults.first?.node, let scene = sceneController.scene, let dropNode = node.topmost(until: scene.rootNode) as? SCNNode {
+                sceneController.tapAnimation(node: dropNode)
+            } else {
                 var translation = matrix_identity_float4x4
                 translation.columns.3.z = -1.0
                 let transform = camera.transform * translation
                 let position = SCNVector3(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
                 sceneController.addNode(position: position)
             }
+            
+//            if let camera = sceneView.session.currentFrame?.camera {
+//                var translation = matrix_identity_float4x4
+//                translation.columns.3.z = -1.0
+//                let transform = camera.transform * translation
+//                let position = SCNVector3(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+//                sceneController.addNode(position: position)
+//            }
         }
     }
     

@@ -15,6 +15,8 @@
 		AA8BD2EE21430CD9008935A3 /* DropScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BD2ED21430CD9008935A3 /* DropScene.swift */; };
 		AA8BD2F12143122A008935A3 /* Node_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BD2F02143122A008935A3 /* Node_Extensions.swift */; };
 		AA8BD2F521431CEA008935A3 /* drop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA8BD2F421431CEA008935A3 /* drop.jpg */; };
+		AA8BD2F821432561008935A3 /* SceneObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BD2F721432561008935A3 /* SceneObject.swift */; };
+		AA8BD2FA21433FA2008935A3 /* DropObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BD2F921433FA2008935A3 /* DropObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AA8BD2ED21430CD9008935A3 /* DropScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropScene.swift; sourceTree = "<group>"; };
 		AA8BD2F02143122A008935A3 /* Node_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node_Extensions.swift; sourceTree = "<group>"; };
 		AA8BD2F421431CEA008935A3 /* drop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = drop.jpg; sourceTree = "<group>"; };
+		AA8BD2F721432561008935A3 /* SceneObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneObject.swift; sourceTree = "<group>"; };
+		AA8BD2F921433FA2008935A3 /* DropObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		AA8BD2D721430494008935A3 /* AudioDrops2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				AA8BD2F621432543008935A3 /* Objects */,
 				AA8BD2EF21431210008935A3 /* Utilities */,
 				AA8BD2EC21430CB9008935A3 /* Scenes */,
 				AA8BD2D821430494008935A3 /* AppDelegate.swift */,
@@ -87,6 +92,15 @@
 				AA8BD2F02143122A008935A3 /* Node_Extensions.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AA8BD2F621432543008935A3 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AA8BD2F721432561008935A3 /* SceneObject.swift */,
+				AA8BD2F921433FA2008935A3 /* DropObject.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA8BD2EE21430CD9008935A3 /* DropScene.swift in Sources */,
+				AA8BD2F821432561008935A3 /* SceneObject.swift in Sources */,
 				AA8BD2F12143122A008935A3 /* Node_Extensions.swift in Sources */,
+				AA8BD2FA21433FA2008935A3 /* DropObject.swift in Sources */,
 				AA8BD2DD21430494008935A3 /* ViewController.swift in Sources */,
 				AA8BD2D921430494008935A3 /* AppDelegate.swift in Sources */,
 			);
